@@ -1,0 +1,653 @@
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter', sans-serif;
+}
+
+/* THEME VARIABLES */
+
+:root{
+--bg:#121A1B;
+--text:#ffffff;
+--card:#1f1f1f;
+--accent:#5465FF;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+line-height:1.6;
+transition:0.4s;
+}
+
+/* NAVBAR */
+
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+background:#000000;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* LOGO */
+
+.logo{
+display:flex;
+align-items:center;
+text-decoration:none;
+color:var(--text);
+font-size:20px;
+font-weight:600;
+}
+
+.logo img{
+width:35px;
+margin-right:10px;
+}
+
+/* NAV LINKS */
+
+.nav-links{
+display:flex;
+list-style:none;
+}
+
+.nav-links li{
+margin-left:25px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:var(--text);
+font-size:16px;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:var(--accent);
+}
+
+/* NAV ACTIONS */
+
+.nav-actions{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+/* THEME BUTTON */
+
+#themeBtn{
+background:var(--card);
+border:none;
+color:var(--text);
+padding:8px 12px;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* HAMBURGER */
+
+.menu-btn{
+display:none;
+font-size:22px;
+cursor:pointer;
+}
+
+/* MOBILE MENU */
+
+@media(max-width:768px){
+
+.nav-links{
+position:absolute;
+top:70px;
+left:-100%;
+flex-direction:column;
+width:100%;
+background:var(--bg);
+text-align:center;
+transition:0.3s;
+}
+
+.nav-links li{
+margin:20px 0;
+}
+
+.nav-links.active{
+left:0;
+}
+
+.menu-btn{
+display:block;
+}
+
+}
+
+/* PAGE TITLE */
+
+.page-title{
+text-align:center;
+font-size:34px;
+margin-top:90px;
+margin-bottom:20px;
+color:var(--accent);
+}
+
+/* ABOUT SECTION */
+
+.about{
+padding:40px 8%;
+}
+
+.about-container{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+max-width:1000px;
+margin:auto;
+}
+
+.about-image img{
+
+width:230px;
+
+border-radius:50%;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+
+border:3px solid var(--accent);
+
+}
+
+.about-text{
+max-width:500px;
+font-size:16px;
+}
+
+.about-text p{
+margin-bottom:15px;
+}
+
+/* SKILLS */
+.skills{
+padding:30px 8%;
+text-align:center;
+}
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+max-width:900px;
+margin:auto;
+}
+
+.skill-card{
+background:var(--card);
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.skill-card:hover{
+transform:translateY(-6px);
+}
+
+/* EDUCATION */
+.education{
+padding:20px 8%;
+text-align:center;
+}
+
+.education-card{
+background:var(--card);
+padding:25px;
+border-radius:10px;
+max-width:600px;
+margin:auto;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:var(--card);
+margin-top:40px;
+}
+
+.education-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
+max-width:1000px;
+
+margin:auto;
+
+}
+
+.education-card{
+
+background:var(--card);
+
+padding:25px;
+
+border-radius:10px;
+
+transition:0.3s;
+
+}
+
+.education-card:hover{
+
+transform:translateY(-6px);
+
+}
+
+/* SKILLS GRID */
+
+.skills-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+max-width:1000px;
+
+margin:auto;
+
+}
+
+/* SKILL CARD */
+
+.skill-card{
+
+background:var(--card);
+
+border-radius:10px;
+
+padding:20px;
+
+cursor:pointer;
+
+transition:0.35s;
+
+border:1px solid transparent;
+
+position:relative;
+
+}
+
+/* GLOW BORDER */
+
+.skill-card:hover{
+
+transform:translateY(-6px) scale(1.02);
+
+border-color:var(--accent);
+
+box-shadow:0 0 12px var(--accent);
+
+}
+
+/* HEADER */
+
+.skill-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.skill-header h3{
+
+font-size:18px;
+
+}
+
+/* TOGGLE ICON */
+
+.toggle-icon{
+
+font-size:20px;
+
+color:var(--accent);
+
+}
+
+/* SUB SKILLS */
+
+.skill-content{
+
+max-height:0;
+
+overflow:hidden;
+
+transition:0.4s ease;
+
+margin-top:10px;
+
+}
+
+.skill-content ul{
+
+list-style:none;
+
+}
+
+.skill-content li{
+
+padding:6px 0;
+
+border-bottom:1px solid rgba(255,255,255,0.1);
+
+}
+
+
+/* EDUCATION GRID */
+
+.education-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+max-width:1000px;
+
+margin:auto;
+
+}
+
+/* CARD */
+
+.edu-card{
+
+background:var(--card);
+
+border-radius:10px;
+
+padding:20px;
+
+transition:0.35s;
+
+cursor:pointer;
+
+border:1px solid transparent;
+
+}
+
+/* HOVER GLOW */
+
+.edu-card:hover{
+
+transform:translateY(-6px) scale(1.02);
+
+border-color:var(--accent);
+
+box-shadow:0 0 12px var(--accent);
+
+}
+
+/* HEADER */
+
+.edu-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.edu-toggle{
+
+font-size:20px;
+
+color:var(--accent);
+
+}
+
+/* CONTENT */
+
+.edu-content{
+
+max-height:0;
+
+overflow:hidden;
+
+transition:0.4s ease;
+
+margin-top:10px;
+
+}
+
+/* ABOUT CARD */
+
+.about-container{
+
+background:var(--card);
+
+padding:35px;
+
+border-radius:12px;
+
+max-width:950px;
+
+margin:auto;
+
+border:1px solid transparent;
+
+transition:0.35s;
+
+box-shadow:0 6px 20px rgba(0,0,0,0.35);
+
+}
+
+/* GLOW EFFECT */
+
+.about-container:hover{
+
+transform:translateY(-6px) scale(1.01);
+
+border-color:var(--accent);
+
+box-shadow:0 0 14px var(--accent);
+
+}
+
+
+.about-text{
+
+max-width:520px;
+
+font-size:17px;
+
+line-height:1.8;
+
+text-align:justify;
+
+letter-spacing:0.3px;
+
+}
+
+.about-text p{
+
+margin-bottom:14px;
+
+opacity:0.9;
+
+}
+
+.contact-cta {
+  text-align: center;   /* This centers the button horizontally */
+  padding: 40px 20px;   /* space above/below */
+  position: relative;    /* ensures it's above other elements */
+  z-index: 10;           /* clickable */
+}
+
+.contact-btn {
+  display: inline-block; /* ensures it respects text-align center */
+  padding: 14px 30px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px var(--accent);
+}
+
+/* ================= BODY & GLOBAL TEXT ================= */
+body, p, span, li, a, div {
+  color: var(--text);  /* ensures all normal text uses theme text color */
+  transition: 0.3s;
+}
+
+/* Links inside content */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Headings (H1-H6) */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent);  /* headings keep accent color */
+  margin-bottom: 10px;
+}
+
+/* Paragraphs and normal text */
+p, li, span, .card-text {
+  color: var(--text);  /* body text, card content */
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* Cards like about, skills, education */
+.about-container,
+.skill-card,
+.education-card,
+.edu-card {
+  background: var(--card);
+  color: var(--text);   /* ensures text inside card uses theme */
+  border-radius: 12px;
+  transition: 0.35s;
+}
+
+/* Buttons */
+button, .contact-btn, .view-all-btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover,
+.contact-btn:hover,
+.view-all-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+/* Lists inside cards and content */
+.skill-content li,
+.edu-content li {
+  color: var(--text);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Inputs & textareas (if any) */
+input, textarea {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 8px;
+  transition: 0.3s;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+/* ================= THEME COLORS + UPPERCASE (Content Only) ================= */
+
+/* Headings inside sections, cards, and content */
+section h1, section h2, section h3, section h4, section h5, section h6,
+.skill-card h3,
+.edu-card h3,
+.about-text h2, .about-text h3 {
+  color: var(--accent) !important;
+  text-transform: uppercase;
+}
+
+/* ================= ABOUT SECTION COLORS ================= */
+
+/* Headings / titles in About section uppercase + accent */
+.about-text h1,
+.about-text h2,
+.about-text h3,
+.about-text h4,
+.about-text h5,
+.about-text h6,
+.section-title
+{
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+/* Paragraphs in About section stay normal + text color */
+.about-text p {
+  color: var(--text);
+  text-transform: none;
+}
+
+/* Buttons in About section uppercase + accent */
+.about-text button,
+.contact-btn,
+.view-all-btn {
+  background: var(--accent);
+  color: white;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.about-text button:hover,
+.contact-btn:hover,
+.view-all-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px var(--accent);
+}
