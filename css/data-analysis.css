@@ -463,3 +463,106 @@ section p {
 .project-card h3 {
   text-decoration: none; /* Ensure project title h3 has no underline */
 }
+
+/* ================= MOBILE RESPONSIVE IMPROVEMENTS ================= */
+@media(max-width:768px){
+
+  /* Header */
+  header {
+    padding: 12px 5%;
+  }
+  .logo { font-size: 18px; }
+  .nav-links li { margin: 15px 0; }
+
+  /* Hero */
+  .hero {
+    padding: 80px 5% 40px;
+  }
+  .hero h1 {
+    font-size: 8vw; /* scale heading based on viewport width */
+  }
+  .hero p {
+    font-size: 4.5vw;
+  }
+  .hero-btn {
+    padding: 10px 20px;
+  }
+
+  /* Intro section */
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+  .intro-img img {
+    width: 180px; /* smaller image on mobile */
+  }
+  .intro-text h2 {
+    font-size: 5.5vw;
+  }
+  .intro-text p {
+    font-size: 4vw;
+  }
+  .intro-buttons a {
+    margin: 8px 5px 0 5px;
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  /* Skills section */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .skill-card h3 {
+    font-size: 16px;
+  }
+
+  /* Projects section */
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .project-img {
+    height: 150px; /* smaller image */
+  }
+  .project-info h3 {
+    font-size: 16px;
+  }
+  .project-info p {
+    font-size: 14px;
+  }
+  .view-all-btn {
+    display: block;
+    margin: 20px auto;
+  }
+
+  /* Career & Contact */
+  .career-objective .section-title,
+  .contact-cta-section .section-title {
+    font-size: 1.5rem;
+  }
+  .career-objective .career-text,
+  .contact-cta-section .connect-text {
+    font-size: 14px;
+    padding: 0 5%;
+  }
+
+  /* Section titles left-aligned */
+  .section-title,
+  .page-title {
+    margin-left: 5%;
+    font-size: 22px;
+  }
+  section p {
+    margin-left: 5%;
+    font-size: 14px;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 14px;
+    padding: 15px 5%;
+  }
+}
+
