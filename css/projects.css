@@ -185,3 +185,59 @@ footer{
   box-shadow: 0 0 18px var(--accent);
   border: 1px solid var(--accent);
 }
+
+/* ================= PROJECT CARD ================= */
+.project-card {
+  display: block;                    /* make entire card clickable */
+  background: var(--card);           /* theme-aware background */
+  border-radius: 12px;               /* rounded corners */
+  overflow: hidden;                  /* contain image */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* soft base shadow */
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  text-decoration: none;             /* remove underline from links */
+  color: var(--text);                /* theme-aware text */
+  border: 1px solid transparent;     /* default border for hover effect */
+}
+
+/* Project Image Styling */
+.project-card img {
+  width: 100%;                       /* full width */
+  height: 200px;                      /* uniform height */
+  object-fit: cover;                  /* crop nicely */
+  display: block;
+  border: 2px solid var(--accent);    /* subtle accent outline */
+  border-radius: 8px;                 /* rounded image corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* soft shadow for depth */
+  transition: transform 0.4s ease;
+}
+
+/* Project Info Box */
+.project-info {
+  padding: 15px 20px;
+}
+
+/* Project Title & Description */
+.project-info h3 {
+  color: var(--accent);               /* accent color */
+  text-transform: uppercase;          /* all caps */
+  margin-bottom: 5px;
+}
+
+.project-info p {
+  color: var(--text);
+  opacity: 0.85;
+  line-height: 1.5;
+  text-transform: none;               /* keep description normal case */
+}
+
+/* Hover Effects */
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 18px var(--accent);
+}
+
+.project-card:hover img {
+  transform: scale(1.05);             /* subtle zoom-in on image */
+}
+
