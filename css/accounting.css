@@ -635,3 +635,186 @@ button:hover, .contact-btn:hover, .view-all-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 0 10px var(--accent);
 }
+
+/* ================= MOBILE RESPONSIVENESS ================= */
+
+/* GENERAL MOBILE ADJUSTMENTS */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  header {
+    padding: 12px 5%;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    background: var(--bg);
+    transition: 0.3s;
+    padding: 20px 0;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    padding: 100px 15px 60px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    letter-spacing: 1.5px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  /* INTRO SECTION */
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .intro-img img {
+    width: 150px;
+    margin-bottom: 15px;
+  }
+
+  .intro-text {
+    max-width: 100%;
+    font-size: 15px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  /* SKILLS SECTION */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .skill-card {
+    padding: 12px 15px;
+  }
+
+  .skill-header h3 {
+    font-size: 16px;
+  }
+
+  .skill-content li {
+    font-size: 14px;
+  }
+
+  .toggle-btn {
+    font-size: 14px;
+    padding: 4px 10px;
+  }
+
+  /* PROJECTS SECTION */
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-img {
+    height: 150px;
+  }
+
+  .project-info h3 {
+    font-size: 16px;
+  }
+
+  .project-info p {
+    font-size: 14px;
+  }
+
+  .view-all-btn {
+    display: block;
+    width: 90%;
+    margin: 15px auto;
+    padding: 10px 20px;
+  }
+
+  /* CAREER / CONNECT TEXT */
+  section p {
+    font-size: 14px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+
+/* EXTRA SMALL DEVICES <480px */
+@media (max-width: 480px) {
+  .hero {
+    padding: 80px 10px 50px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .intro-img img {
+    width: 120px;
+  }
+
+  .intro-text {
+    font-size: 14px;
+  }
+
+  .skills-grid,
+  .projects-container {
+    gap: 15px;
+  }
+
+  .skill-card,
+  .project-card {
+    padding: 10px 12px;
+  }
+
+  .skill-header h3,
+  .project-info h3 {
+    font-size: 14px;
+  }
+
+  .skill-content li,
+  .project-info p {
+    font-size: 13px;
+  }
+
+  .view-all-btn,
+  .btn,
+  .hero-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
