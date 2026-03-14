@@ -531,13 +531,13 @@ margin-right:10px;
   /* INTRO SECTION STACK */
   .intro-container {
     flex-direction: column !important;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 20px !important;
   }
   .intro-img img {
     width: 150px !important;
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
   }
   .intro-text {
     max-width: 100% !important;
@@ -546,7 +546,7 @@ margin-right:10px;
   /* HERO SECTION */
   .hero h1 {
     font-size: 32px !important;
-    line-height: 1.2;
+    line-height: 1.2 !important;
   }
   .hero p {
     font-size: 16px !important;
@@ -558,7 +558,7 @@ margin-right:10px;
   /* SKILLS GRID */
   .skills-grid {
     grid-template-columns: 1fr !important;
-    gap: 20px;
+    gap: 20px !important;
     padding: 10px !important;
   }
 
@@ -589,10 +589,10 @@ margin-right:10px;
     margin: 20px 0 !important;
   }
   .nav-links.active {
-    left: 0 !important;
+    left: 0 !important; /* slide in menu */
   }
   .menu-btn {
-    display: block !important;
+    display: block !important; /* show hamburger */
   }
 
   /* HERO TEXT */
@@ -603,27 +603,42 @@ margin-right:10px;
     font-size: 14px !important;
   }
 
-  /* INTRO BUTTONS */
+  /* INTRO BUTTONS STACK */
   .intro-buttons a {
     display: block !important;
-    margin: 10px 0 !important;
+    margin: 10px auto !important;
   }
 }
 
 @media (max-width:480px) {
   /* PROJECTS STACK */
   .projects-container {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr !important; /* single column */
   }
   .project-card img {
     height: 130px !important;
   }
+
+  /* HERO */
   .hero h1 {
     font-size: 24px !important;
   }
   .hero p {
     font-size: 13px !important;
   }
+
+  /* SKILLS CARDS */
+  .skill-card {
+    padding: 10px !important;
+  }
+  .skill-header h3 {
+    font-size: 16px !important;
+  }
+  .toggle-btn {
+    padding: 4px 10px !important;
+    font-size: 14px !important;
+  }
 }
+
 
 
